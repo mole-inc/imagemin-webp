@@ -1,26 +1,22 @@
 {
-	"name": "imagemin-webp",
+	"name": "@mole-inc/imagemin-webp",
 	"version": "5.1.0",
 	"description": "WebP imagemin plugin",
 	"license": "MIT",
-	"repository": "imagemin/imagemin-webp",
-	"author": {
-		"name": "Kevin Mårtensson",
-		"email": "kevinmartensson@gmail.com",
-		"url": "github.com/kevva"
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/mole-inc/imagemin-webp.git"
 	},
-	"maintainers": [
-		{
-			"name": "Sindre Sorhus",
-			"email": "sindresorhus@gmail.com",
-			"url": "sindresorhus.com"
-		}
-	],
 	"engines": {
-		"node": ">=6"
+		"node": ">=10.13.0"
 	},
 	"scripts": {
-		"test": "xo && ava"
+		"test": "xo && nyc ava",
+		"coverage": "nyc report --reporter=lcov",
+		"release": "standard-version"
+	},
+	"publishConfig": {
+		"access": "public"
 	},
 	"files": [
 		"index.js"
@@ -39,14 +35,18 @@
 		"webp"
 	],
 	"dependencies": {
-		"cwebp-bin": "^5.0.0",
+		"@mole-inc/cwebp-bin": "^6.0.0",
 		"exec-buffer": "^3.0.0",
 		"is-cwebp-readable": "^3.0.0"
 	},
 	"devDependencies": {
-		"ava": "^0.25.0",
+		"@commitlint/cli": "^8.3.5",
+		"@commitlint/config-conventional": "^8.3.4",
+		"ava": "^3.7.1",
+		"husky": "^4.2.5",
 		"is-webp": "^1.0.0",
-		"pify": "^4.0.0",
-		"xo": "^0.23.0"
+		"nyc": "^15.0.1",
+		"standard-version": "^7.1.0",
+		"xo": "^0.29.1"
 	}
 }

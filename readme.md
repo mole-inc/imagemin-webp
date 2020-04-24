@@ -1,12 +1,12 @@
-# imagemin-webp [![Build Status](https://travis-ci.org/imagemin/imagemin-webp.svg?branch=master)](https://travis-ci.org/imagemin/imagemin-webp)
+# imagemin-webp ![Node CI](https://github.com/mole-inc/imagemin-webp/workflows/Node%20CI/badge.svg)
 
-> WebP [imagemin](https://github.com/imagemin/imagemin) plugin
+> WebP [imagemin](https://github.com/mole-inc/imagemin) plugin
 
 
 ## Install
 
 ```
-$ npm install imagemin-webp
+$ npm install @mole-inc/imagemin-webp
 ```
 
 
@@ -14,7 +14,7 @@ $ npm install imagemin-webp
 
 ```js
 const imagemin = require('imagemin');
-const imageminWebp = require('imagemin-webp');
+const imageminWebp = require('@mole-inc/imagemin-webp');
 
 (async () => {
 	await imagemin(['images/*.{jpg,png}'], 'build/images', {
@@ -138,3 +138,10 @@ A list of metadata to copy from the input to the output if present.
 Type: `Buffer`
 
 Buffer to optimize.
+
+
+## License
+
+This is a fork of [imagemin/imagemin-webp](https://github.com/imagemin/imagemin-webp).
+
+see license file.

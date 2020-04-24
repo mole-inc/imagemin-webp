@@ -1,7 +1,7 @@
 'use strict';
 const execBuffer = require('exec-buffer');
 const isCwebpReadable = require('is-cwebp-readable');
-const cwebp = require('cwebp-bin');
+const cwebp = require('@mole-inc/cwebp-bin');
 
 module.exports = (options = {}) => input => {
 	if (!Buffer.isBuffer(input)) {
